@@ -1,15 +1,8 @@
 const express = require("express");
+const { GetPosts } = require("../controllers/posts.controller");
 const Router = express.Router();
 
-Router.get("/", (req, res) => {
-  res.json({
-    id: 1,
-    nom: "Mayinzi",
-    postnom: "Mukawa",
-    prenom: "Joel",
-    post: "Développeur fullstack",
-  });
-});
+Router.get("/", GetPosts);
 
 Router.post("/", (req, res) => {
   res.status(200).json({ message: req.body.message });
