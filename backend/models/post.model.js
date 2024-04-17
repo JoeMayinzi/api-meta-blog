@@ -21,6 +21,10 @@ const PostModel = mongoose.Schema(
       require: true,
     },
 
+    comments: {
+      type: [String],
+    },
+
     likers: {
       type: [String],
     },

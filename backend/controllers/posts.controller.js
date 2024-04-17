@@ -23,4 +23,14 @@ const SetPosts = async (req, res) => {
   res.status(200).json(post);
 };
 
-module.exports = { GetPosts, SetPosts };
+const DeletePost = async (req, res) => {
+  const postID = req.params.id;
+
+  if (!postID) {
+    res.status(400).json({ message: "post not found" });
+  }
+
+  res.status(200).json({ message: "element supprimé avec succès" });
+};
+
+module.exports = { GetPosts, SetPosts, DeletePost };
