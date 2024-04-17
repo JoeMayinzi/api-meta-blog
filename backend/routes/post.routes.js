@@ -5,6 +5,7 @@ const {
   DeletePost,
   EditPost,
 } = require("../controllers/posts.controller");
+
 const Router = express.Router();
 
 Router.get("/", GetPosts);
