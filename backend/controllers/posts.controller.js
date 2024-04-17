@@ -30,7 +30,21 @@ const DeletePost = async (req, res) => {
     res.status(400).json({ message: "post not found" });
   }
 
-  res.status(200).json({ message: "element supprimé avec succès" });
+  res
+    .status(200)
+    .json({ message: "Article  supprimé avec succès" + " " + postID });
 };
 
-module.exports = { GetPosts, SetPosts, DeletePost };
+const EditPost = async (req, res) => {
+  const postID = req.params.id;
+
+  if (!postID) {
+    res.status(400).json({ message: "post not found" });
+  }
+
+  res
+    .status(200)
+    .json({ message: "Article modifié avec succès" + " " + postID });
+};
+
+module.exports = { GetPosts, SetPosts, DeletePost, EditPost };
