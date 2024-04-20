@@ -16,8 +16,12 @@ const SetPosts = async (req, res) => {
   }
 
   const post = PostModel.create({
-    title: req.title,
+    title: req.body.title,
     content: req.body.content,
+    author: req.body.author,
+    category: req.body.category,
+    featuredImg: req.body.featuredImg,
+    articleImg: req.body.articleImg,
   });
 
   res.status(200).json(post);

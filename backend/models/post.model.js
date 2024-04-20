@@ -13,20 +13,19 @@ const PostModel = mongoose.Schema(
     },
 
     author: {
-      type: [String],
+      type: String,
       require: true,
     },
     category: {
-      type: [String],
+      type: String,
       require: true,
     },
-
-    comments: {
-      type: [String],
+    featuredImg: {
+      type: String,
+      require: true,
     },
-
-    likers: {
-      type: [String],
+    articleImg: {
+      type: String,
     },
   },
 
