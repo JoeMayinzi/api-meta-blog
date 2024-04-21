@@ -8,7 +8,7 @@
   },
   "scripts": {
     "server": "nodemon ./backend/server.js",
-    "build": "[my-framework] build --output public",
+    "build": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
